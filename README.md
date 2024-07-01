@@ -7,3 +7,11 @@ Depression is a highly prevalent and disabling condition that incurs substantial
 ## Dataset
 
 For this work we use the E-DAIC dataset used in the AVEC-2019 challenge. The dataset can be found here: https://dcapswoz.ict.usc.edu/
+
+## Contact
+For any questions contact: [Aishik Mandal](aishik.mandal@tu-darmstadt.de) <br>
+[UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) | [TU Darmstadt](https://www.tu-darmstadt.de/) 
+
+## Disclaimer
+
+This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.
