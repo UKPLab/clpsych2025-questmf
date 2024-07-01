@@ -1,2 +1,2 @@
 # QuestMF
-Repository for pap "Enhancing Depression Detection via Question-wise Modality Fusion"
+Repository for paper "Enhancing Depression Detection via Question-wise Modality Fusion"
