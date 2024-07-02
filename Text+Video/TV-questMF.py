@@ -22,6 +22,7 @@ def cmdline_args():
     p.add_argument("-v_ckpt", "--video_checkpoint_path", type=str, help="Path to checkpoint for the video model")
     p.add_argument("-tv_ckpt", "--tv_checkpoint_path", type=str, help="Path to checkpoint for the text+video model")
     p.add_argument("-m_files", "--missing_video_files",nargs='+', type=int, help="List of file numbers for incomplete video files")
+    p.add_argument("-train","--train_model", action='store_true',help="Wheather to train the model or not")
 
     return (p.parse_args())
 
@@ -430,7 +431,8 @@ if __name__ == '__main__':
     loss_fn = nn.MSELoss()
     mae_loss_fn = nn.L1Loss()
     
-    # train(model, train_dataloader, args.tv_checkpoint_path+'-phq'+str(args.question_number)+'-sr-parameters.pt', val_dataloader, epochs=num_epochs, evaluation=True)
+    if args.train_model:
+        train(model, train_dataloader, args.tv_checkpoint_path+'-phq'+str(args.question_number)+'-sr-parameters.pt', val_dataloader, epochs=num_epochs, evaluation=True)
     
     # Load trained TV model
     best_lstm_regressor = lstm_regressor(pretrain_txt_model, pretrain_vid_model)
