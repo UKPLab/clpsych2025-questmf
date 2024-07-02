@@ -22,7 +22,9 @@ For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de)
 ## Creating the environment
 
 ```
-conda create --name <env> --file requirements.txt
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Code Structure
