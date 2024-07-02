@@ -37,7 +37,7 @@ where xx, yy, zz denote missing/incomplete file numbers.
 
 For running this script to evaluate on the validation set for question 8 using trained tav model loaded using a checkpoint file:
 ```
-python TAV-questMF.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -a_ckpt 'audio checkpoint file path' -v_ckpt 'video checkpoint file path' -tav_ckpt 'tav model checkpoint file path' -qno 8 -train -m_files xx yy zz
+python A-questMF.py -d_path 'path to data' -l_path 'path to labels' -a_ckpt 'audio checkpoint file path' -qno 8 -train -m_files xx yy zz
 ```
 where xx, yy, zz denote missing/incomplete file numbers.
  - A-questMF-eval.py: This file is used to evaluate the _QuestMF_ framework. It contains the following arguments:
