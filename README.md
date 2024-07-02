@@ -46,18 +46,18 @@ Each of these folders contains three files:
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - Checkpoint files: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
  - M-questMF.py: Here, M denotes the modalities used and belongs to one of (T,A,V,TA,TV,AV,TAV) depending on the folder. This file is used to train the _QuestMF_ framework. It contains the following arguments:
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - Checkpoint files: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders.
-     - ```-qno```: Since the _QuestMF_ framework trains 8 different models for each question, this argument inputs the question number for which the model will be trained.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-qno```: Since the _QuestMF_ framework trains 8 different models for each question, this argument inputs the question number for which the model will be trained. It takes an integer value from 0 to 8.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
  - M-questMF-eval.py: Here, M denotes the modalities used and belongs to one of (T,A,V,TA,TV,AV,TAV) depending on the folder. This file is used to evaluate the _QuestMF_ framework. It contains the following arguments:
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - Checkpoint files: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders. The checkpoint path given here should be the same as the checkpoint path given in M-questMF.py.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
 <br>
 
 **Further details on running the scripts are provided in each folder**
