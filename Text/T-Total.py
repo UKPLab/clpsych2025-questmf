@@ -17,6 +17,7 @@ def cmdline_args():
     p.add_argument("-l_path", "--label_path", type=str, help="Path to labels, i.e., PHQ-8 scores")
     p.add_argument("-t_ckpt", "--text_checkpoint_path", type=str, help="Path to checkpoint for the text model")
     p.add_argument("-m_files", "--missing_video_files",nargs='+', type=int, help="List of file numbers for incomplete video files")
+    p.add_argument("-train","--train_model", action='store_true',help="Wheather to train the model or not")
 
     return (p.parse_args())
 
@@ -290,8 +291,9 @@ if __name__ == '__main__':
     ccc_loss_fn = ccc_loss()
     loss_fn = nn.MSELoss()
     mae_loss_fn = nn.L1Loss()
-    
-    # train(model, train_dataloader, args.text_checkpoint_path + '-parameters.pt', val_dataloader, epochs=num_epochs, evaluation=True)
+
+    if args.train_model:
+        train(model, train_dataloader, args.text_checkpoint_path + '-parameters.pt', val_dataloader, epochs=num_epochs, evaluation=True)
 
     # Load trained model
     best_lstm_regressor = lstm_regressor()
