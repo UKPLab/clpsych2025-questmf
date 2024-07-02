@@ -7,7 +7,7 @@
      - ```-a_ckpt```: Path for audio model checkpoint file in _Total_ framework.
      - ```-v_ckpt```: Path for video model checkpoint file in _Total_ framework.
      - ```-tav_ckpt```: Path for text+audio+video model checkpoint file in _Total_ framework.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
 <br>
 
 For running this script:
@@ -24,7 +24,7 @@ where xx, yy, zz denote missing/incomplete file numbers
      - ```-v_ckpt```: Path for video model checkpoint file in _QuestMF_ framework.
      - ```-tav_ckpt```: Path for text+audio+video model checkpoint file in _QuestMF_ framework.
      - ```-qno```: Since the _QuestMF_ framework trains 8 different models for each question, this argument inputs the question number for which the model will be trained. It takes an integer value from 1 to 8.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
 <br>
 
 For running this script for question number 8:
@@ -39,7 +39,7 @@ where xx, yy, zz denote missing/incomplete file numbers
      - ```-a_ckpt```: Path for audio model checkpoint file in _QuestMF_ framework.
      - ```-v_ckpt```: Path for video model checkpoint file in _QuestMF_ framework.
      - ```-tav_ckpt```: Path for text+audio+video model checkpoint file in _QuestMF_ framework.
-     - ```-m_files```: Some of the data files are incomplete. This argument takes a list of such file numbers as input and ignores them.
+     - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
 For running this script:
 ```
 python TAV-questMF-eval.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -a_ckpt 'audio checkpoint file path' -v_ckpt 'video checkpoint file path' -tav_ckpt 'tav model checkpoint file path' -m_files xx yy zz
