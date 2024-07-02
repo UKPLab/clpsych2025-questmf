@@ -16,7 +16,7 @@ In our work, we try to predict the PHQ-8 scores from recorded interviews in the 
 - _Total_: Here, we train the models to predict the total questionnaire score from the session inputs. This consists of a single modality encoder for each modality and a single fused model.
 
 ## Contact
-For any questions contact: [Aishik Mandal](aishik.mandal@tu-darmstadt.de) <br>
+For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de) <br>
 [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) | [TU Darmstadt](https://www.tu-darmstadt.de/) 
 
 ## Creating the environment
