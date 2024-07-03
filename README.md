@@ -15,7 +15,7 @@ Depression is a highly prevalent and disabling condition that incurs substantial
 
 For this work, we use the E-DAIC dataset from the AVEC-2019 challenge. The dataset can be requested here: https://dcapswoz.ict.usc.edu/
 <br>
-Once the request form is filled out, the researcher will receive a link for the dataset. The data can be downloaded by simply using ```wget --recursive --no-parent http://example.com/```.
+Once the request form is filled out, the researcher will receive a link for the dataset. The data can be downloaded by simply using ```wget --recursive --no-parent link_to_dataset```.
 
 ## Contact
 For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de) <br>
