@@ -2,7 +2,7 @@
 
 ## Summary
 
-This codebase provides the scripts used in the experiments of the 2024 arXiv paper "Enhancing Depression Detection via Question-wise Modality Fusion". In our work, we try to predict the PHQ-8 scores from recorded interviews in the E-DAIC dataset. A PHQ-8 questionnaire contains 8 questions about depression symptoms, each scored from 0-3 depending on how frequently a person encounters them. This gives a total score in the range of 0-24. Here, we experiment with two different frameworks:
+This codebase provides the scripts used in the experiments of the 2024 arXiv paper "[Enhancing Depression Detection via Question-wise Modality Fusion](link)". In our work, we try to predict the PHQ-8 scores from recorded interviews in the E-DAIC dataset. A PHQ-8 questionnaire contains 8 questions about depression symptoms, each scored from 0-3 depending on how frequently a person encounters them. This gives a total score in the range of 0-24. Here, we experiment with two different frameworks:
 
 - _QuestMF_: Here, we train separate models to predict the score for each question in the questionnaire using session inputs. We sum the scores from each question to get the total questionnaire score. This framework includes 8 single modality encoders for each modality and 8 fused models corresponding to the 8 questions in a PHQ-8 questionnaire.
 - _Total_: Here, we train the models to predict the total questionnaire score from the session inputs. This consists of a single modality encoder for each modality and a single fused model.
@@ -15,7 +15,7 @@ Depression is a highly prevalent and disabling condition that incurs substantial
 
 For this work, we use the E-DAIC dataset from the AVEC-2019 challenge. The dataset can be requested here: https://dcapswoz.ict.usc.edu/
 <br>
-Once the request form is filled out, the researcher will receive a link for the dataset. The data can be downloaded by simply using ```wget```.
+Once the request form is filled out, the researcher will receive a link for the dataset. The data can be downloaded by simply using ```wget --recursive --no-parent http://example.com/```.
 
 ## Contact
 For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de) <br>
