@@ -67,6 +67,12 @@ Each of these folders contains three files:
 
 **Further details on running the scripts are provided in each folder**
 
+## Citation
+
+If you use our code in your research, please cite:
+
+Citation is coming soon.
+
 ## Disclaimer
 
 This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.
