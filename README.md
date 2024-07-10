@@ -1,5 +1,7 @@
 # Enhancing Depression Detection via Question-wise Modality Fusion
 
+![Image](img/Quest-wise-modelling.png)
+
 ## Summary
 
 This codebase provides the scripts used in the experiments of the 2024 arXiv paper "[Enhancing Depression Detection via Question-wise Modality Fusion](link)". In our work, we try to predict the PHQ-8 scores from recorded interviews in the E-DAIC dataset. A PHQ-8 questionnaire contains 8 questions about depression symptoms, each scored from 0-3 depending on how frequently a person encounters them. This gives a total score in the range of 0-24. Here, we experiment with two different frameworks:
