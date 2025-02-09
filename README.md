@@ -1,6 +1,7 @@
 # Enhancing Depression Detection via Question-wise Modality Fusion
-
+<p align="center">
 <img src ="img/Quest-wise-modelling.png" width="500">
+</p>
 
 ## Summary
 
