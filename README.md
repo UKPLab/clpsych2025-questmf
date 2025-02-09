@@ -58,11 +58,11 @@ Each of these folders contains two files:
 
  - M-questMF.py: Here, M denotes the modalities used and belongs to one of (T,A,V,TA,TV,AV,TAV) depending on the folder. This file is used to train the _QuestMF_ framework. It contains the following arguments:
      - ```-s```: This argument takes the seed for the experiment as input.
-     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter as input.
-     - ```-b```: This argument takes the value of the $\beta$ hyperparameter as input.
+     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input.
+     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input.
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
-     - Checkpoint files: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders.
+     - ```-m_ckpt```: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders.
      - ```-qno```: Since the _QuestMF_ framework trains 8 different models for each question, this argument inputs the question number for which the model will be trained. It takes an integer value from 0 to 8.
      - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
      - ```-train```: Whether to train the model or not. If this argument is mentioned, the model will be trained from scratch.
