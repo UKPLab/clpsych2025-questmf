@@ -2,8 +2,8 @@
 
  - T-questMF.py: This file is used to train the _QuestMF_ framework and evaluate it on the validation set. It contains the following arguments:
      - ```-s```: This argument takes the seed for the experiment as input.
-     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input.
-     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input.
+     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input. Preferable values include {1,1.5,2}.
+     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input. Preferable values include {0.5,1}.
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - ```-t_ckpt```: Path for text model checkpoint file in _QuestMF_ framework.
@@ -20,7 +20,7 @@ where xx, yy, zz denote missing/incomplete file numbers.
 
 For running this script to evaluate on the validation set for question 8 using trained tav model loaded using a checkpoint file:
 ```
-python T-questMF.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -qno 8 -train -m_files xx yy zz
+python T-questMF.py -s 42 -a 1 -b 0.5 -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -qno 8 -train -m_files xx yy zz
 ```
 where xx, yy, zz denote missing/incomplete file numbers.
  - T-questMF-eval.py: This file is used to evaluate the _QuestMF_ framework. It contains the following arguments:
