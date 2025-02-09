@@ -1,6 +1,9 @@
 ## Text files
 
  - T-questMF.py: This file is used to train the _QuestMF_ framework and evaluate it on the validation set. It contains the following arguments:
+     - ```-s```: This argument takes the seed for the experiment as input.
+     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input.
+     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input.
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - ```-t_ckpt```: Path for text model checkpoint file in _QuestMF_ framework.
@@ -11,7 +14,7 @@
 
 For running this script to train a tav model from scratch for question number 8 and evaluating on the validation set:
 ```
-python T-questMF.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -qno 8 -train -m_files xx yy zz
+python T-questMF.py -s 42 -a 1 -b 0.5 -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -qno 8 -train -m_files xx yy zz
 ```
 where xx, yy, zz denote missing/incomplete file numbers.
 
@@ -21,12 +24,13 @@ python T-questMF.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'tex
 ```
 where xx, yy, zz denote missing/incomplete file numbers.
  - T-questMF-eval.py: This file is used to evaluate the _QuestMF_ framework. It contains the following arguments:
+     - ```-s```: This argument takes the seed for the experiment as input.
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - ```-t_ckpt```: Path for text model checkpoint file in _QuestMF_ framework.
      - ```-m_files```: Some of the data files are missing/incomplete for a certain modality. This argument takes a list of such file numbers as input and ignores them.
 For running this script:
 ```
-python T-questMF-eval.py -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -m_files xx yy zz
+python T-questMF-eval.py -s 42 -d_path 'path to data' -l_path 'path to labels' -t_ckpt 'text checkpoint file path' -m_files xx yy zz
 ```
 where xx, yy, zz denote missing/incomplete file numbers.
