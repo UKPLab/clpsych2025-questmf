@@ -58,8 +58,8 @@ Each of these folders contains two files:
 
  - M-questMF.py: Here, M denotes the modalities used and belongs to one of (T,A,V,TA,TV,AV,TAV) depending on the folder. This file is used to train the _QuestMF_ framework. It contains the following arguments:
      - ```-s```: This argument takes the seed for the experiment as input.
-     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input.
-     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input.
+     - ```-a```: This argument takes the value of the $\alpha$ hyperparameter in the _ImbOLL_ function as input. Preferable values include {1,1.5,2}.
+     - ```-b```: This argument takes the value of the $\beta$ hyperparameter in the _ImbOLL_ function as input. Preferable values include {0.5,1}.
      - ```-d_path```: This argument takes the data path as input. The data path contains the text transcripts files, audio files and video features files.
      - ```-l_path```: This argument takes the label path as input. The label path contains the PHQ-8 scores for the test, validation and test splits. It also contains fine-grained question-wise scores for train and validation splits.
      - ```-m_ckpt```: These arguments take the checkpoints to save and load the trained models. This argument differs depending on the combination of modalities used and is further explained in the respective folders.
