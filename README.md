@@ -7,7 +7,7 @@
 
 This codebase provides the scripts used in the experiments of the 2024 arXiv paper "[Enhancing Depression Detection via Question-wise Modality Fusion](link)". In our work, we try to predict the PHQ-8 scores from recorded interviews in the E-DAIC dataset. A PHQ-8 questionnaire contains 8 questions about depression symptoms, each scored from 0-3 depending on how frequently a person encounters them. This gives a total score in the range of 0-24. Here, we experiment with the _QuestMF_ framework.
 
-_QuestMF_: Here, we train separate models to predict the score for each question in the questionnaire using session inputs. We sum the scores from each question to get the total questionnaire score. This framework includes 8 single modality encoders for each modality and 8 fused models corresponding to the 8 questions in a PHQ-8 questionnaire. We train each ecoder using a novel _ImbOLL_ loss function to consider imbalanced ordinal classification. The _ImbOLL_ loss function is defined as follows:
+_QuestMF_: Here, we train separate models to predict the score for each question in the questionnaire using session inputs. We sum the scores from each question to get the total questionnaire score. This framework includes 8 single modality encoders for each modality and 8 fused models corresponding to the 8 questions in a PHQ-8 questionnaire. We train each encoder using a novel _ImbOLL_ loss function to consider imbalanced ordinal classification. The _ImbOLL_ loss function is defined as follows:
 
 ```math
 \mathcal{L}_{ImbOLL-\alpha,\beta} = -\sum_{i=1}^{N}log(1-p_i)d(y,i)^{\alpha}w(y)^{\beta}
