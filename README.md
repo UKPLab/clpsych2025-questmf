@@ -80,8 +80,33 @@ Each of these folders contains two files:
 ## Citation
 
 If you use our code in your research, please cite:
-
-Citation is coming soon.
+```
+@inproceedings{mandal-etal-2025-enhancing,
+    title = "Enhancing Depression Detection via Question-wise Modality Fusion",
+    author = "Mandal, Aishik  and
+      Atzil-Slonim, Dana  and
+      Solorio, Thamar  and
+      Gurevych, Iryna",
+    editor = "Zirikly, Ayah  and
+      Yates, Andrew  and
+      Desmet, Bart  and
+      Ireland, Molly  and
+      Bedrick, Steven  and
+      MacAvaney, Sean  and
+      Bar, Kfir  and
+      Ophir, Yaakov",
+    booktitle = "Proceedings of the 10th Workshop on Computational Linguistics and Clinical Psychology (CLPsych 2025)",
+    month = may,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.clpsych-1.4/",
+    doi = "10.18653/v1/2025.clpsych-1.4",
+    pages = "44--61",
+    ISBN = "979-8-89176-226-8",
+    abstract = "Depression is a highly prevalent and disabling condition that incurs substantial personal and societal costs. Current depression diagnosis involves determining the depression severity of a person through self-reported questionnaires or interviews conducted by clinicians. This often leads to delayed treatment and involves substantial human resources. Thus, several works try to automate the process using multimodal data. However, they usually overlook the following: i) The variable contribution of each modality for each question in the questionnaire and ii) Using ordinal classification for the task. This results in sub-optimal fusion and training methods. In this work, we propose a novel Question-wise Modality Fusion (QuestMF) framework trained with a novel Imbalanced Ordinal Log-Loss (ImbOLL) function to tackle these issues. The performance of our framework is comparable to the current state-of-the-art models on the E-DAIC dataset and enhances interpretability by predicting scores for each question. This will help clinicians identify an individual{'}s symptoms, allowing them to customise their interventions accordingly. We also make the code for the QuestMF framework publicly available."
+}
+```
 
 ## Disclaimer
 
